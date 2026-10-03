@@ -1,0 +1,896 @@
+Skip to main content
+
+arrow_back Back to start <https://aistudio.google.com/apps>arrow_back
+<https://aistudio.google.com/apps>
+
+
+  Equine Viral & Immunologic Disease Case Simulator
+
+edit
+
+arrow_split Remix
+
+Share
+
+Publish
+
+bug_report
+
+settings
+
+spark
+
+
+  Gemini
+
+add
+
+Gemini 3.8 Flash Ran for 8s
+build Built
+
+I have resolved the issue and enabled justification text boxes across
+the application:
+
+ 1.
+
+    *Unlocked All Justification Boxes Across Stages*:
+
+      *
+
+        Removed the disabled={isCompleted}restriction that was locking
+        the textareas in *Stage 1*(Initial Clinical Reasoning), *Stage
+        4*(Definitive Diagnosis Justification), and *Stage 5*(Treatment
+        Protocol Notes). You can now write and edit your text in these
+        boxes freely at any point, whether before or after advancing.
+
+ 2.
+
+    *Added Dedicated Answer Justification Boxes to Questions*:
+
+      *
+
+        *Stage 3 Diagnostic Interpretation Questions*: Every lab report
+        question now has its own *"Your Clinical Justification for this
+        Answer"*text box right beneath the options where you can write
+        and save your reasoning.
+
+      *
+
+        *Stage 6 Immunology Debrief Questions*: Each debrief question
+        now includes an interactive *"Your Clinical Justification for
+        this Answer"*box.
+
+      *
+
+        All entered justifications are automatically saved to your case
+        state and local storage.
+
+flag Checkpoint
+View changes
+
+text_compare
+redo Restore
+
+redo
+
+Create a new modal that opens on demand to show the student's real-time
+score broken down by category, highlighting strengths and areas for
+improvement, using a progress bar and simple visual cues.
+
+Gemini 3.8 Flash Ran for 196s
+summarize_auto Action historychevron_right
+
+chevron_right
+
+Here are key actions taken for the app:
+
+edit Edited 6 files
+
+src/utils/scoreCalculator.ts
+
+check_circle
+
+src/components/RealTimeScoreModal.tsx
+
+check_circle
+
+src/components/TopNav.tsx
+
+check_circle
+
+src/components/StageProgressBar.tsx
+
+check_circle
+
+src/components/Stage6DebriefView.tsx
+
+check_circle
+
+src/App.tsx
+
+check_circle
+
+build Built
+
+
+      Real-Time Clinical Score Breakdown Modal
+
+A modal is now available on demand to provide students with continuous,
+real-time performance evaluations broken down by veterinary competence
+categories.
+
+------------------------------------------------------------------------
+
+
+      Key Capabilities
+
+ 1.
+
+    *Opens On Demand from Anywhere in the Case*:
+
+      *
+
+        *Top Navigation Bar*: Clicking the live score button (Score: XX%
+        [Breakdown]).
+
+      *
+
+        *Progressive Stepper*: Clicking the Live Score: XX%
+        [Breakdown]button in the stage header.
+
+      *
+
+        *Stage 6 Debrief*: Clicking the interactive *Overall Score*card
+        or the *Score Breakdown & Feedback*button.
+
+      *
+
+        *Footer Bar*: Clicking the *Real-Time Score Report*link.
+
+      *
+
+        Supports *ESC*key dismissal, backdrop click dismissal, and an
+        explicit close button.
+
+ 2.
+
+    *Categorical Competency Breakdown (100 Total Rubric Points)*:
+
+      *
+
+        *Stage 1: Initial Clinical Differential Formulation (20 pts)*:
+        Evaluates recognition of Purpura Hemorrhagica, viral vasculitis
+        mimics (EVA/EIA), differential breadth, and initial clinical notes.
+
+      *
+
+        *Stage 2: Diagnostic Stewardship & Test Selection (20 pts)*:
+        Evaluates requisitioning of essential diagnostic tests (Skin
+        Punch Biopsy with Direct IFA, CBC/buffy coat, Serum Chem,
+        Coggins, and S. equi Culture).
+
+      *
+
+        *Stage 3: Laboratory & Histopathologic Interpretation (25 pts)*:
+        Evaluates accurate interpretation of leukocytosis,
+        hyperglobulinemia, CK, negative Coggins/EVA, and Type III
+        hypersensitivity venular immune-complex deposition.
+
+      *
+
+        *Stage 4: Differential Revision & Definitive Diagnosis (20
+        pts)*: Evaluates definitive diagnosis selection, systematic
+        ruling in/out of candidates, and clinical justification depth.
+
+      *
+
+        *Stage 5: Therapeutic Protocol & Patient Safety (15 pts)*:
+        Evaluates cornerstone immunosuppressive corticosteroids,
+        bactericidal penicillin, supportive hydrotherapy/bandages, and
+        strict avoidance of contraindicated strangles vaccines.
+
+ 3.
+
+    *Strengths & Targeted Improvement Coaching*:
+
+      *
+
+        *Executive Summary Cards*: Highlights unlocked clinical
+        strengths alongside recommendations for points needing attention.
+
+      *
+
+        *Per-Category Deep Dives*: Specific bullet points explaining
+        what the student mastered and concrete suggestions for what to
+        review or document.
+
+      *
+
+        *Action Filter*: Quickly toggle between *All Categories*,
+        *Actionable Focus*(areas needing attention), and *Mastered*.
+
+ 4.
+
+    *Progress Bars & Visual Cues*:
+
+      *
+
+        *Cumulative Competency Progress Bar*: Gradient bar tracking
+        progress through Novice (0%), Developing (40%), Proficient
+        (65%), and Clinical Mastery (85%+).
+
+      *
+
+        *Individual Category Progress Bars*: Displays exact points
+        earned (e.g., 16 / 20 pts · 80%).
+
+      *
+
+        *Simple Visual Cues*:
+
+          o
+
+            🟢 *Mastered*(Emerald chip with checkmark)
+
+          o
+
+            🔵 *Good Progress*(Indigo chip with upward trend)
+
+          o
+
+            🟡 *Needs Attention*(Amber chip with alert indicator)
+
+          o
+
+            ⚪ *Pending*(Slate chip with clock for future stages)
+
+          o
+
+            🛡️ *Patient Safety Indicator*: Confirms zero dangerous
+            contraindications or flags violations.
+
+      *
+
+        *Direct Stage Navigation*: Every category card has a *"Go to
+        Step X"*button, allowing students to jump directly to that step
+        to refine their answers.
+
+flag Checkpoint
+View changes
+
+text_compare
+redo Restore
+
+redo
+
+Add PDF or slide deck export
+
+Gemini 3.8 Flash Ran for 0s
+error Quota limits exceeded
+
+Add PDF download or slide deck export
+
+Gemini 3.8 Flash Ran for 208s
+summarize_auto Action historychevron_right
+
+chevron_right
+
+Here are key actions taken for the app:
+
+download Installed 3 packages
+
+edit Edited 7 files
+
+src/utils/pdfGenerator.ts
+
+check_circle
+
+src/utils/slideDeckGenerator.ts
+
+check_circle
+
+src/components/ExportModal.tsx
+
+check_circle
+
+src/components/TopNav.tsx
+
+check_circle
+
+src/components/Stage6DebriefView.tsx
+
+check_circle
+
+src/components/RealTimeScoreModal.tsx
+
+check_circle
+
+src/App.tsx
+
+check_circle
+
+build Built
+
+
+      PDF Download & Slide Deck Export Hub
+
+A clinical case export center is now integrated across the application,
+allowing students and instructors to download publication-grade *PDF
+Clinical Reports*and export *16:9 PowerPoint Slide Decks (.pptx)*on demand.
+
+------------------------------------------------------------------------
+
+
+      What Has Been Added
+
+
+        1. Native PDF Document Downloads (.pdf)
+
+  *
+
+    *Full Case Study & Student Performance PDF*:
+
+      o
+
+        Automatically formats a multi-page, publication-grade vector
+        document with running headers and page numbers.
+
+      o
+
+        *Clinical Core*: Signalment, epidemiology, petechial triad
+        distinction (vasculitis vs. thrombocytopenia), diagnostic
+        panels, histopathology/IFA findings, 6-step pathophysiology
+        cascade, and evidence-based pharmacology protocols.
+
+      o
+
+        *Personalized Student Transcript*: Incorporates the student's
+        real-time score ({studentScore.percentage}%), rubric points,
+        category-by-category grades, unlocked clinical strengths,
+        targeted coaching recommendations, and documented clinical
+        justifications.
+
+  *
+
+    *Reference Study Guide PDF*:
+
+      o
+
+        Clean textbook-grade version without personal student score
+        data, ideal for distribution, printing, or course binders.
+
+  *
+
+    *Print / Browser Save-as-PDF*:
+
+      o
+
+        Optimized for print dialogs with clean CSS @media printlayout.
+
+  *
+
+    *Markdown Compendium (.md)*:
+
+      o
+
+        Instant raw markdown download for Notion, Obsidian, or Markdown
+        editors.
+
+------------------------------------------------------------------------
+
+
+        2. PowerPoint Slide Deck Export (.pptx) & In-App Presentation Viewer
+
+  *
+
+    *Native 16:9 PowerPoint Deck (.pptx)*:
+
+      o
+
+        Generated using PptxGenJSwith a clean veterinary medicine
+        palette (deep emerald and slate).
+
+      o
+
+        Contains *9 core clinical slides*+ *1 student assessment
+        slide*(Title & Overview, Patient Signalment & Epidemiology,
+        Physical Exam & Petechial Triad, Differential Diagnosis Matrix,
+        Diagnostic Laboratory Workup, Histopathology & Direct IFA, 6-
+        Step Pathophysiological Cascade, Evidence-Based Therapeutics,
+        Discussion & SLE Differentiation, and Student Competency
+        Performance).
+
+      o
+
+        Includes formatted card boxes, bullet hierarchies, clinical
+        highlight callouts, and embedded *Speaker Notes / Clinical
+        Teaching Pearls*.
+
+      o
+
+        Ready to open directly in *Microsoft PowerPoint*, *Google
+        Slides*, and *Apple Keynote*.
+
+  *
+
+    *Interactive 16:9 In-App Slide Viewer*:
+
+      o
+
+        Allows students and instructors to present or review slides
+        directly inside the modal.
+
+      o
+
+        Features slide counter, thumbnail navigation pills, keyboard
+        navigation (left/right arrow keys or PageUp/PageDown), and a
+        collapsible speaker notes panel.
+
+  *
+
+    *Standalone Interactive HTML Deck (.html)*:
+
+      o
+
+        Single-file presentation that opens offline in any browser
+        without requiring Microsoft Office.
+
+------------------------------------------------------------------------
+
+
+      Where to Access Exports On Demand
+
+  *
+
+    *Top Navigation Bar*: Click the *PDF / Slides*button in the header.
+
+  *
+
+    *Stage 6 Case Debrief*: Dedicated *Download PDF Report*and *Export
+    Slide Deck (.pptx)*buttons in both the banner controls and the
+    compendium section.
+
+  *
+
+    *Real-Time Score Breakdown Modal*: Click *Export PDF /
+    Slides*directly from the score report footer.
+
+  *
+
+    *Footer*: Click *Export PDF / Slide Deck*from any stage of the case.
+
+flag Checkpoint
+View changes
+
+text_compare
+redo Restore
+
+redo
+
+Add a way to export link to Github
+
+Gemini 3.8 Flash Ran for 281s
+summarize_auto Action historychevron_right
+
+chevron_right
+
+Here are key actions taken for the app:
+
+edit Edited 5 files
+
+src/components/ExportModal.tsx
+
+check_circle
+
+src/components/TopNav.tsx
+
+check_circle
+
+src/components/Stage6DebriefView.tsx
+
+check_circle
+
+src/components/RealTimeScoreModal.tsx
+
+check_circle
+
+src/App.tsx
+
+check_circle
+
+build Built
+
+
+      GitHub Export & Sharing Capabilities
+
+Users can now export links and case study materials directly to GitHub
+from several locations across the application:
+
+------------------------------------------------------------------------
+
+
+      Where to Access GitHub Export
+
+ 1.
+
+    *Top Navigation Bar*: Click the *GitHub*button (Zone 3: Top Bar) to
+    open the GitHub export view instantly.
+
+ 2.
+
+    *Clinical Export Hub*: Open the *Export Center*(via PDF / Slidesor
+    Export Hub) and navigate to the dedicated *"Export Link to GitHub"*tab.
+
+ 3.
+
+    *Stage 6 Pathophysiology Debrief*: Click *"Export to
+    GitHub"*alongside the PDF report and slide deck download actions.
+
+ 4.
+
+    *Real-Time Score Breakdown Modal*: Access the *GitHub*button from
+    the bottom action bar.
+
+ 5.
+
+    *Application Footer*: Click *"Export Link to GitHub"*on any page.
+
+------------------------------------------------------------------------
+
+
+      Features Included in the GitHub Export Hub
+
+  *
+
+    *1-Click GitHub Gist Export*:
+
+      o
+
+        Automatically copies the complete case study transcript
+        formatted in *GitHub-Flavored Markdown (GFM)*with student
+        performance rubric tables, stage justifications, and clinical
+        takeaways.
+
+      o
+
+        Automatically launches gist.github.com <https://www.google.com/
+        url?sa=E&q=https%3A%2F%2Fgist.github.com%2F>in a new tab for
+        instant pasting and sharing.
+
+      o
+
+        Includes a direct .mdfile download option
+        (Equine_Case_204_GitHub_Study_Guide.md).
+
+  *
+
+    *Interactive Markdown Badges & Links*:
+
+      o
+
+        *Live GitHub Badge*: Ready-to-paste markdown badge ([![EquiMed
+        PBL](...)]) displaying the case title, custom green shield
+        badge, and direct URL back to the interactive case.
+
+      o
+
+        *Direct Markdown Link*: Formatted hyperlink to embed into
+        READMEs, course syllabi, or coursework portfolios.
+
+      o
+
+        *Copy App URL*: Quick one-click button to copy the direct URL.
+
+  *
+
+    *Personal Repository Link & Git CLI Instructions*:
+
+      o
+
+        Input field to save a personal or course GitHub repository link
+        (persisted in local storage).
+
+      o
+
+        *"Create New Repo on GitHub"*shortcut prefilled with repository
+        title and case description.
+
+      o
+
+        Expandable *Git CLI snippet*with copy functionality for terminal
+        commands (git init, git add ., git commit, git push origin main).
+
+flag Checkpoint
+thumb_up
+
+thumb_down
+
+View changes
+
+text_compare
+redo Restore
+
+redo
+
+lightbulb_tips Suggestions
+close
+
+chevron_left
+Add AI capabilities and integrations to your appspark AI Features spark
+
+Add 'Notes' auto-saveEnhancement auto_awesome
+
+Add 'Dark Mode'Design design_services
+
+chevron_right
+
+add_circle
+
+Buildkeyboard_arrow_down
+
+mic
+
+arrow_upward_alt
+
+visibilityPreview
+
+codeCode
+
+folder_openArtifacts
+
+devices
+
+sync
+
+fullscreen
+
+draw
+
+docs
+No artifacts to show
+When Gemini makes an implementation plan, it will show up here. Try
+asking for a plan in your next prompt.
+
+File explorer
+search
+
+add_circle
+
+collapse_all
+
+No matching results
+folder expand_more src
+more_vert
+
+folder chevron_right assets
+more_vert
+
+folder chevron_right images
+more_vert
+
+image equine_filly_clinical_case_1790972821749.jpg
+more_vert
+
+image equine_mucosal_ecchymosis_1790972832300.jpg
+more_vert
+
+image vasculitis_histology_slide_1790972842874.jpg
+more_vert
+
+folder expand_more components
+more_vert
+
+segment ExportModal.tsx
+more_vert
+
+segment NotebookLMAudioPlayer.tsx
+more_vert
+
+segment RealTimeScoreModal.tsx
+more_vert
+
+segment ReferenceModal.tsx
+more_vert
+
+segment ResetConfirmModal.tsx
+more_vert
+
+segment Stage1HistoryView.tsx
+more_vert
+
+segment Stage2PhysicalExamView.tsx
+more_vert
+
+segment Stage3DiagnosticResultsView.tsx
+more_vert
+
+segment Stage4DifferentialRevisionView.tsx
+more_vert
+
+segment Stage5TreatmentPlanView.tsx
+more_vert
+
+segment Stage6DebriefView.tsx
+more_vert
+
+segment StageProgressBar.tsx
+more_vert
+
+segment TopNav.tsx
+more_vert
+
+folder chevron_right data
+more_vert
+
+segment caseData.ts
+more_vert
+
+segment fullCaseCompendium.ts
+more_vert
+
+folder chevron_right types
+more_vert
+
+segment case.ts
+more_vert
+
+folder expand_more utils
+more_vert
+
+segment pdfGenerator.ts
+more_vert
+
+segment scoreCalculator.ts
+more_vert
+
+segment slideDeckGenerator.ts
+more_vert
+
+segment App.tsx
+more_vert
+
+stylus index.css
+more_vert
+
+segment main.tsx
+more_vert
+
+draft .env.example
+more_vert
+
+draft .gitignore
+more_vert
+
+draft bun.lock
+more_vert
+
+code index.html
+more_vert
+
+data_object metadata.json
+more_vert
+
+data_object package.json
+more_vert
+
+segment server.ts
+more_vert
+
+data_object tsconfig.json
+more_vert
+
+segment vite.config.ts
+more_vert
+
+draft
+more_vert
+
+chevron_left
+
+data_object metadata.json
+close
+
+segment pdfGenerator.ts
+close
+
+segment slideDeckGenerator.ts
+close
+
+segment ExportModal.tsx
+close
+
+segment TopNav.tsx
+close
+
+segment Stage6DebriefView.tsx
+close
+
+segment RealTimeScoreModal.tsx
+close
+
+segment App.tsx
+close
+
+chevron_right
+
+settings
+
+529
+530
+                </button>
+              </>
+
+import React, { useState, useEffect } from 'react'; import { X, Award,
+TrendingUp, CheckCircle2, AlertTriangle, Clock, Sparkles, Lightbulb,
+31
+export const RealTimeScoreModal: React.FC<RealTimeScoreModalProps> = ({
+
+Media
+
+cancel 2info 8
+keyboard_arrow_up
+
+Dismiss all
+
+cancel 2info 8
+keyboard_arrow_down
+
+SystemBuild Render Start Backend Log Server restarting... Backend Log Server stopped. Backend Log Server started on port 3000. Backend Log Pre-warming 1 paths...
+  
+  > react-example@0.0.0 dev
+  > tsx server.ts --port 3000 --host 0.0.0.0
+  
+  ◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }
+  (!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+    - `__dirname` (vite.config.ts:11:27). Use `import.meta.dirname` instead
+  Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+  Server listening on port 3000 Backend Log Pre-warming completed. Backend Log CONNECTED SystemBuild Render End App Debug [vite] connecting... App Error [vite] failed to connect to websocket (Error: WebSocket closed without opened.).  App Unhandled Rejection WebSocket closed without opened. Backend Log CONNECTED 
+
+Finished
+Fullscreen
+Select mode
+Add files from Google Drive
+Insert files (text, images, audio, video) into your prompt.
+Take a picture and insert it into your prompt.
+Add files
+No changes to save
+AI music generation with Lyria
+Firestore & Auth with Firebase
+Fast image generation & editing with Nano Banana 2
+Real-time voice with the Gemini Live API
+Turn images into cinematic video with Veo 3
+Access real-time info with Search Grounding
+Access real-time info with Maps Grounding
+Context-aware chat powered by Gemini
+Text-to-video generation with Veo 3
+Audio transcription with Gemini 3.5 Transcribe
+Create computeDetailedScore calculation utility with category breakdown,
+strengths, areas for improvement, and visual cues
+Create RealTimeScoreModal component with category breakdown, progress
+bar, simple visual cues, strengths, and areas for improvement
+Add onOpenScoreModal prop and interactive score button in TopNav
+Add onOpenScoreModal and score button in StageProgressBar
+Add onOpenScoreModal prop and interactive score button to Stage6DebriefView
+Import RealTimeScoreModal and computeDetailedScore in App.tsx
+Open editor settings
+Close file
+Create client-side PDF export generator using jsPDF with vector styling
+and student performance report
+Create slideDeckGenerator utility with pptxgenjs PowerPoint export and
+standalone interactive HTML slide deck export
+Create ExportModal component for PDF downloads and slide deck
+presentation exports
+Add onOpenExport prop and Export button to TopNav
+Add FileDown and Presentation to Stage6 imports and onOpenExport to props
+Add onOpenExport prop and export button to RealTimeScoreModal
+Import ExportModal in App.tsx
+Press space for more information.
+Add GitHub icon and export tab props to ExportModal
+Add Github icon and button to TopNav
+Add Github icon and export buttons to Stage6DebriefView
+Update onOpenExport prop type in RealTimeScoreModal
+Update exportInitialTab type and handleOpenExport in App.tsx to include
+'github' tab and add footer GitHub link
+Current checkpoint
+Send prompt
+Suggestions
